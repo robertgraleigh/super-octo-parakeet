@@ -1,0 +1,30 @@
+{
+  "name": "super-octo-parakeet",
+  "version": "1.0.0",
+  "description": "Node, Material CSS, Sass, Js, Webpack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertgraleigh/super-octo-parakeet.git"
+  },
+  "keywords": [
+    "Node",
+    "Material",
+    "CSS",
+    "Sass",
+    "JS",
+    "Webpack"
+  ],
+  "author": "@RobertGRaleigh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robertgraleigh/super-octo-parakeet/issues"
+  },
+  "homepage": "https://github.com/robertgraleigh/super-octo-parakeet#readme",
+  "dependencies": {
+    "webpack": "^3.11.0"
+  }
+}
