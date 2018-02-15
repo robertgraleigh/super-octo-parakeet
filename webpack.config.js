@@ -3,6 +3,7 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const fontawesome = require('@fortawesome/fontawesome');
 const webpack = require('webpack');
 const path = require('path');
 
@@ -12,7 +13,7 @@ const extractSass = new ExtractTextPlugin({
 
 const config = {
   entry: {
-    vendor: ['jquery', 'materialize-css'],
+    vendor: ['jquery', 'materialize-css', '@fortawesome/fontawesome', '@fortawesome/fontawesome-free-solid'],
     app: './src/js/app.js'
   },
   output: {
@@ -56,6 +57,9 @@ const config = {
         loader: 'file-loader'
       },
     ],
+  },
+  externals: {
+    fontawesome: 'fontawesome'
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
