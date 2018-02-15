@@ -5,14 +5,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
+
 const extractSass = new ExtractTextPlugin({
   filename: '[name].[contenthash].css'
 });
 
 const config = {
   entry: {
-    app: './src/js/app.js',
-    vendors: './src/js/vendors.js'
+    vendor: ['jquery', 'materialize-css'],
+    app: './src/js/app.js'
   },
   output: {
     filename: '[name].bundle.js',
@@ -56,12 +57,18 @@ const config = {
       },
     ],
   },
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './dist'
-  },
   plugins: [
     new CleanWebpackPlugin(['dist']),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: Infinity,
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.$': 'jquery',
+      'window.jQuery': 'jquery',
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html'
@@ -71,13 +78,11 @@ const config = {
       template: 'src/landing.html'
     }),
     extractSass,
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.$': 'jquery',
-      'window.jQuery': 'jquery',
-    }),
   ],
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist'
+  }
 };
 
 module.exports = config;
