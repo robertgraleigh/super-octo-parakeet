@@ -13,7 +13,7 @@ const extractSass = new ExtractTextPlugin({
 
 const config = {
   entry: {
-    vendor: ['jquery', 'materialize-css', '@fortawesome/fontawesome', '@fortawesome/fontawesome-free-solid'],
+    vendor: ['jquery', 'bootstrap', 'popper.js', '@fortawesome/fontawesome', '@fortawesome/fontawesome-free-solid'],
     app: './src/js/app.js'
   },
   output: {
@@ -80,6 +80,10 @@ const config = {
     new HtmlWebpackPlugin({
       filename: 'landing.html',
       template: 'src/landing.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'pricing.html',
+      template: 'src/pricing.html'
     }),
     extractSass,
   ],
