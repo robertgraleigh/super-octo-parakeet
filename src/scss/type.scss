@@ -1,5 +1,9 @@
-$headerFontFamily: 'Alegreya', 'Times New Roman', 'Times', serif;
-
+$headerFontFamily: 'Alegreya', 'Georgia', 'Times New Roman', 'Times', serif;
+$bodyFontFamily: 'Alegreya', 'Georgia', 'Times New Roman', 'Times', serif;
 h1, h2, h3, h4, h5, h6 {
   font-family: $headerFontFamily;
-} 
+}
+
+.nav-link {
+  font-family: $bodyFontFamily;
+}
