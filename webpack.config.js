@@ -4,6 +4,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const fontawesome = require('@fortawesome/fontawesome');
+const fontAwesomeFreeSolid = require('@fortawesome/fontawesome-free-solid');
+const fontAwesomeFreeBrands = require("@fortawesome/fontawesome-free-brands");
 const webpack = require('webpack');
 const path = require('path');
 
@@ -13,7 +15,14 @@ const extractSass = new ExtractTextPlugin({
 
 const config = {
   entry: {
-    vendor: ['jquery', 'bootstrap', 'popper.js', '@fortawesome/fontawesome', '@fortawesome/fontawesome-free-solid'],
+    vendor: [
+      'jquery',
+      'bootstrap',
+      'popper.js',
+      '@fortawesome/fontawesome',
+      '@fortawesome/fontawesome-free-solid',
+      '@fortawesome/fontawesome-free-brands'
+    ],
     app: './src/js/app.js'
   },
   output: {
@@ -59,7 +68,9 @@ const config = {
     ],
   },
   externals: {
-    fontawesome: 'fontawesome'
+    fontawesome: 'fontawesome',
+    fontAwesomeFreeSolid : 'fontAwesomeFreeSolid',
+    fontAwesomeFreeBrands: 'fontAwesomeFreeBrands'
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),

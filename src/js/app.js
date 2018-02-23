@@ -3,11 +3,15 @@
 import 'jquery';
 import 'popper.js';
 import 'bootstrap';
-
 import '../scss/app.scss';
+import fontawesome from '@fortawesome/fontawesome';
+import solid from '@fortawesome/fontawesome-free-solid';
+import brands from '@fortawesome/fontawesome-free-brands';
 
-// add the foundation library to the jquery object
-$(function () {
-  $(document).foundation();
-
+$(document).ready(function (){
+    $("#click").click(function (){
+        $('html, body').animate({
+            scrollTop: $("#div1").offset().top
+        }, 2000);
+    });
 });
