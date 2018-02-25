@@ -1,9 +1,21 @@
 $headerFontFamily: 'Alegreya', 'Georgia', 'Times New Roman', 'Times', serif;
 $bodyFontFamily: 'Alegreya', 'Georgia', 'Times New Roman', 'Times', serif;
+$brandFontFamily: 'Alegreya', serif;
+
 h1, h2, h3, h4, h5, h6 {
   font-family: $headerFontFamily;
 }
 
+.navbar-brand {
+  font-family: $brandFontFamily;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: capitalize !important;
+}
+
 .nav-link {
   font-family: $bodyFontFamily;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-transform: capitalize !important;
 }
