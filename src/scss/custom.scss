@@ -1,6 +1,7 @@
 // custom.scss form
 
-// primary sitewide header
+/* SITE HEADERS ***************************************************************/
+
 .primary-header {
   background-image: url('../img/wood-image-blue-blur-1920.jpg');
   background-position: center;
@@ -8,28 +9,6 @@
 }
 
 .what-we-do-header {
-  background-attachment: fixed;
-  background-image: url('../img/wood-image-blue-blur-1920.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-.what-you-want-header {
-  background-attachment: fixed;
-  background-image: url('../img/151949935694201705 (1).jpeg');
-  background-position: center;
-  background-repeat: repeat;
-  background-size: contain;
-}
-
-.process-header {
-  background-attachment: fixed;
-  background-image: url('../img/wood-image-blue-blur-1920.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-.contact-us-header {
   background-attachment: fixed;
   background-image: url('../img/wood-image-blue-blur-1920.jpg');
   background-position: center;
@@ -50,8 +29,35 @@
   background-size: cover;
 }
 
-.features {
-  padding-bottom: 60px;
+.bg-we-work-custom-house {
+  background-attachment: fixed;
+  background-image: url('../img/bg-we-work-pdx-custom-house.png');
+  background-position: center;
+  background-size: contain;
+}
+
+.bg-pattern-one {
+  background-attachment: fixed;
+  background-image: url('../img/151949935694201705.jpeg');
+  background-position: center;
+  background-size: 5px;
+  background-repeat: repeat;
+}
+
+.bg-pattern-two {
+  background-attachment: fixed;
+  background-image: url('../img/151949931545824505.gif');
+  background-position: center;
+  background-size: 5px;
+  background-repeat: repeat;
+}
+
+.bg-pattern-three {
+  background-attachment: fixed;
+  background-image: url('../img/151949931545824505.gif');
+  background-position: center;
+  background-size: 50px;
+  background-repeat: repeat;
 }
 
 .border-blue {
